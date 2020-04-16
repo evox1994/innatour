@@ -1343,7 +1343,8 @@
 @media screen and (max-width: 560px){
 	.header-select-wrap .text {
 		display: block;
-		width: calc(100% - 180px);
+		width: calc(100% - 170px);
+		max-width: 160px;
 		text-align: right;
 	}
 	.header-select-wrap .text p {

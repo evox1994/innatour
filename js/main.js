@@ -159,6 +159,11 @@ $(document).ready(function(){
 		disable_search: true
 	});
 
+	var countries = ['Россия','Турция','Египет'];
+	$('.b-input.countries input').autocomplete({
+		lookup: countries
+	});
+
 	function scrollBanner(){
 		if ( $('.scroll-wrap-banner').length ){
 			if ( $(window).width() > 768 ) {

@@ -922,12 +922,15 @@
 }
 .b-steps li:before {
 	content: '';
-	width: 90px;
+	width: calc(100% - 150px);
 	height: 1px;
 	background-color: #e3e3e3;
 	position: absolute;
 	top: 44.5px;
 	left: calc(50% + 90px);
+}
+.b-steps li:last-child:before {
+	content: none;
 }
 .b-steps li .number {
 	display: block;
@@ -1077,6 +1080,14 @@
 		max-width: 400px;
 		right: auto;
 		left: 0;
+	}
+
+	.b-steps li {
+		width: calc(100%/3 - 10px);
+	}
+	.b-steps li:before {
+		width: calc(100% - 115px);
+		left: calc(50% + 65px);
 	}
 }
 @media screen and (max-width: 860px){

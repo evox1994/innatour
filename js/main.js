@@ -163,6 +163,9 @@ $(document).ready(function(){
 	$('.b-input.countries input').autocomplete({
 		lookup: countries
 	});
+	$('.b-input.tickets input').autocomplete({
+		lookup: countries
+	});
 
 	function scrollBanner(){
 		if ( $('.scroll-wrap-banner').length ){

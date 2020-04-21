@@ -659,6 +659,14 @@
 	margin: 0 auto;
 }
 
+.tourvisor .TVHotTours {
+	width: 100% !important;
+}
+.tourvisor .TVHotItem {
+	margin-bottom: 10px !important;
+	margin-right: 10px !important;
+}
+
 .b-banner {
 	position: relative;
 	background-color: #0c2c5c;

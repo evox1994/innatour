@@ -3150,6 +3150,11 @@
 	.popup {
 		padding: 50px 10px;
 	}
+
+	.tourvisor .TVHotItem {
+		margin-bottom: 10px !important;
+		margin-right: auto !important;
+	}
 }
 @media screen and (max-width: 560px){
 	.header-select-wrap .text {

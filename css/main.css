@@ -271,20 +271,95 @@
 	justify-content: space-between;
 	align-items: center;
 }
-.header-bot .nav li {
+.header-bot .nav > li {
+	position: relative;
 	padding: 0 5px;
 	color: #ffffff;
 	font-size: 14px;
 	font-weight: 600;
 }
-.header-bot .nav li:first-child {
+.header-bot .nav > li.li-drop {
+	padding-right: 20px;
+}
+.header-bot .nav > li.li-drop:before {
+	content: '';
+	width: 10px;
+	height: 10px;
+	position: absolute;
+	right: 5px;
+	top: calc(50% - 5px);
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+	background-image: url('../i/drop-arr.svg');
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-ms-transition: all 0.3s;
+	transition: all 0.3s;
+}
+.header-bot .nav > li.li-drop:hover:before {
+	-webkit-transform: rotate(-180deg);
+	-moz-transform: rotate(-180deg);
+	-ms-transform: rotate(-180deg);
+	transform: rotate(-180deg);
+}
+.header-bot .nav > li:first-child {
 	padding-left: 0;
 }
-.header-bot .nav li:last-child {
+.header-bot .nav > li:last-child {
 	padding-right: 0;
 }
-.header-bot .nav li a {
+.header-bot .nav > li > a {
 	color: #ffffff;
+}
+.header-bot .nav > li > a:hover {
+	opacity: 0.5;
+}
+.header-bot .nav > li.li-drop span:hover {
+	cursor: default;
+}
+.header-bot .nav > li.li-drop .drop {
+	display: none;
+	padding-top: 10px;
+	width: auto;
+	min-width: 100%;
+	position: absolute;
+	left: 50%;
+	top: 100%;
+	z-index: 10;
+	white-space: nowrap;
+	-webkit-transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	transform: translateX(-50%);
+}
+.header-bot .nav > li.li-drop:hover .drop {
+	display: block;
+}
+.header-bot .nav > li.li-drop .drop:before {
+	content: '';
+	width: 0;
+	height: 0;
+	position: absolute;
+	left: calc(50% - 5px);
+	top: 5px;
+	border: 5px solid transparent;
+	border-top: 0;
+	border-bottom-color: #28b758;
+}
+.header-bot .nav > li.li-drop .drop .drop-wrap {
+	border: 1px solid #28b758;
+	border-top-width: 5px;
+	border-radius: 0 0 5px 5px;
+	background-color: #ffffff;
+	text-align: left;
+	padding: 5px 10px;
+}
+.header-bot .nav > li.li-drop .drop .drop-wrap > ul > li {
+	padding: 5px 0;
+}
+.header-bot .nav > li.li-drop .drop .drop-wrap > ul > li > a:hover {
+	opacity: 0.5;
 }
 
 .footer {
@@ -1348,6 +1423,69 @@
 	margin-left: 10px;
 	font-size: 12px;
 }
+.b-col {
+	max-width: 135px;
+	margin-bottom: 15px;
+}
+.b-col label {
+	display: block;
+	font-size: 16px;
+}
+.b-col .b-col-flex {
+	margin-top: 10px;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.b-col .b-col-flex .less, .b-col .b-col-flex .more {
+	display: block;
+	width: 23px;
+	height: 23px;
+	position: relative;
+	cursor: pointer;
+}
+.b-col .b-col-flex .less:before,
+.b-col .b-col-flex .more:before,
+.b-col .b-col-flex .more:after {
+	content: '';
+	width: 23px;
+	height: 3px;
+	border-radius: 100px;
+	background-color: #e4f1f8;
+	position: absolute;
+	left: 0;
+	top: 10px;
+}
+.b-col .b-col-flex .more:after {
+	-webkit-transform: rotate(90deg);
+	-moz-transform: rotate(90deg);
+	-ms-transform: rotate(90deg);
+	transform: rotate(90deg);
+}
+.b-col .b-col-flex input {
+	display: block;
+	width: 35px;
+	height: 35px;
+	border: 3px solid #e4f1f8;
+	border-radius: 5px;
+	font-family: 'ProximaNova', sans-serif;
+	font-weight: 600;
+	font-size: 24px;
+	margin: 0 14px;
+	color: #e4f1f8;
+	text-align: center;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	line-height: 1;
+}
+.b-col .b-col-flex input::-webkit-outer-spin-button,
+.b-col .b-col-flex input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	margin: 0;
+}
 
 .autocomplete-suggestions {
 	text-align: left;
@@ -2022,6 +2160,18 @@
 	text-align: left;
 }
 
+.popup {
+	padding: 70px 50px;
+	background-color: #ffffff;
+	border-radius: 5px;
+	width: 95%;
+	max-width: 770px;
+	text-align: center;
+}
+.popup .b-form {
+	margin-top: 30px;
+}
+
 
 
 
@@ -2694,6 +2844,9 @@
 	.b-form .btn {
 		padding: 18px 10px;
 	}
+	.b-col label {
+		font-size: 14px;
+	}
 
 	.autocomplete-suggestions {
 		font-size: 14px;
@@ -2959,6 +3112,10 @@
 	.b-error .image-error img {
 		max-width: 50px;
 	}
+
+	.popup {
+		padding: 50px 10px;
+	}
 }
 @media screen and (max-width: 560px){
 	.header-select-wrap .text {
@@ -3070,6 +3227,9 @@
 		max-width: none;
 	}
 
+	.b-col {
+		margin: 0 auto 15px;
+	}
 	.b-form-flex {
 		display: block;
 	}

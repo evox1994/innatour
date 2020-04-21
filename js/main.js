@@ -29,6 +29,7 @@ $(document).ready(function(){
 		$('.mobile-btn').removeClass('active');
 		$('.mobile-menu').removeClass('active');
 		$('body').removeClass('no-scroll');
+		$('.mobile-menu .nav li').removeClass('active');
 	});
 
 	$('input').on('input',function(){
@@ -165,6 +166,34 @@ $(document).ready(function(){
 	});
 	$('.b-input.tickets input').autocomplete({
 		lookup: countries
+	});
+
+	$(document).on('click','.b-col .less',function(){
+		var value = Number($(this).parent('.b-col-flex').find('input').val());
+		if ( value > 0 ){
+			value--;
+			$(this).parent('.b-col-flex').find('input').val(value);
+		}
+	});
+	$(document).on('click','.b-col .more',function(){
+		var value = Number($(this).parent('.b-col-flex').find('input').val());
+		value++;
+		$(this).parent('.b-col-flex').find('input').val(value);
+	});
+
+	$('.b-col input').on('change',function(){
+		var value = Number($(this).val());
+		if (value < 0){
+			$(this).val(0);
+		}
+	});
+
+	$(document).on('click','.mobile-menu .nav li.li-drop span',function(){
+		$(this).parent('.li-drop').addClass('active');
+	});
+
+	$(document).on('click','.drop-back',function(){
+		$(this).parent('.drop').parent('.li-drop').removeClass('active');
 	});
 
 	function scrollBanner(){

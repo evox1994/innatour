@@ -53,7 +53,7 @@
 								</div>
 							</div>
 						</div>
-						<a href="#" class="btn header-btn">Заказать звонок</a>
+						<a href="#popup-callback" class="btn header-btn fancybox">Заказать звонок</a>
 					</div>
 				</div>
 			</div>
@@ -64,9 +64,35 @@
 						<li><a href="/">Горящие туры</a></li>
 						<li><a href="/">Раннее бронирование</a></li>
 						<li><a href="/">Поиск тура онлайн</a></li>
+						<li class="li-drop">
+							<span>Доп. услуги</span>
+							<div class="drop">
+								<div class="drop-wrap">
+									<ul>
+										<li><a href="/">Трансфер</a></li>
+										<li><a href="/">Виза</a></li>
+										<li><a href="/">Страховка</a></li>
+									</ul>
+								</div>
+							</div>
+						</li>
 						<li><a href="/">Страны</a></li>
 						<li><a href="/">Авиабилеты</a></li>
-						<li><a href="/">Информация</a></li>
+						<li class="li-drop">
+							<span>Информация</span>
+							<div class="drop">
+								<div class="drop-wrap">
+									<ul>
+										<li><a href="/">О компании</a></li>
+										<li><a href="/">Отзывы</a></li>
+										<li><a href="/">Менеджеры туризма</a></li>
+										<li><a href="/">Корпоративным клиентам</a></li>
+										<li><a href="/">Туристическим фирмам</a></li>
+										<li><a href="/">Для клиентов</a></li>
+									</ul>
+								</div>
+							</div>
+						</li>
 						<li><a href="/">Контакты</a></li>
 					</ul>
 				</div>
@@ -78,9 +104,33 @@
 					<li><a href="/">Горящие туры</a></li>
 					<li><a href="/">Раннее бронирование</a></li>
 					<li><a href="/">Поиск тура онлайн</a></li>
+					<li class="li-drop">
+						<span>Доп. услуги</span>
+						<div class="drop">
+							<div class="drop-back">Назад</div>
+							<ul class="nav">
+								<li><a href="/">Трансфер</a></li>
+								<li><a href="/">Виза</a></li>
+								<li><a href="/">Страховка</a></li>
+							</ul>
+						</div>
+					</li>
 					<li><a href="/">Страны</a></li>
 					<li><a href="/">Авиабилеты</a></li>
-					<li><a href="/">Информация</a></li>
+					<li class="li-drop">
+						<span>Информация</span>
+						<div class="drop">
+							<div class="drop-back">Назад</div>
+							<ul class="nav">
+								<li><a href="/">О компании</a></li>
+								<li><a href="/">Отзывы</a></li>
+								<li><a href="/">Менеджеры туризма</a></li>
+								<li><a href="/">Корпоративным клиентам</a></li>
+								<li><a href="/">Туристическим фирмам</a></li>
+								<li><a href="/">Для клиентов</a></li>
+							</ul>
+						</div>
+					</li>
 					<li><a href="/">Контакты</a></li>
 				</ul>
 			</div>
@@ -331,6 +381,59 @@
 		</div>
 
 		<div style="display:none;">
+			<div class="popup" id="popup-callback">
+				<h2 class="b-title">Заказать звонок</h2>
+				<div class="b-form">
+					<form>
+						<div class="b-input">
+							<input type="text" placeholder="Ваше имя">
+						</div>
+						<div class="b-input">
+							<input type="tel" placeholder="Ваш телефон">
+						</div>
+						<div class="b-form-submit">
+							<button type="submit" class="btn">Заказать звонок</button>
+							<div class="policy-text"><div class="radio-btn active"></div>Я принимаю условия <a href="#" target="_blank">политики обработки персональных данных</a></div>
+						</div>
+					</form>
+				</div>
+			</div>
+
+			<div class="popup" id="popup-transfer">
+				<h2 class="b-title">Оставьте заявку на&nbsp;трансфер</h2>
+				<div class="b-form">
+					<form>
+						<div class="b-form-flex">
+							<div class="b-col">
+								<label for="child-tickets">Детские билеты</label>
+								<div class="b-col-flex">
+									<div class="less"></div>
+									<input type="number" inputmode="numeric" value="0" id="child-tickets">
+									<div class="more"></div>
+								</div>
+							</div>
+							<div class="b-col">
+								<label for="adult-tickets">Взрослые билеты</label>
+								<div class="b-col-flex">
+									<div class="less"></div>
+									<input type="number" inputmode="numeric" value="0" id="adult-tickets">
+									<div class="more"></div>
+								</div>
+							</div>
+						</div>
+						<div class="b-input">
+							<input type="text" placeholder="Ваше имя">
+						</div>
+						<div class="b-input">
+							<input type="tel" placeholder="Ваш телефон">
+						</div>
+						<div class="b-form-submit">
+							<button type="submit" class="btn">Заказать звонок</button>
+							<div class="policy-text"><div class="radio-btn active"></div>Я принимаю условия <a href="#" target="_blank">политики обработки персональных данных</a></div>
+						</div>
+					</form>
+				</div>
+			</div>
 		</div>
 	</div>
 

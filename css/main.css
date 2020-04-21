@@ -390,6 +390,9 @@
 .footer-top ul li a {
 	color: #ffffff;
 }
+.footer-top ul li a:hover {
+	opacity: 0.5;
+}
 .footer-mid {
 	background-color: #ffffff;
 	padding: 10px 0;
@@ -438,6 +441,9 @@
 .footer-bot .footer-cookie a {
 	color: #9c9c9c;
 }
+.footer-bot .footer-cookie a:hover {
+	color: #ffffff;
+}
 .footer-bot .footer-cookie p {
 	display: block;
 }
@@ -453,6 +459,9 @@
 }
 .footer-bot .footer-info ul li a {
 	color: #9c9c9c;
+}
+.footer-bot .footer-info ul li a:hover {
+	color: #ffffff;
 }
 .footer-bot .footer-info .logo-dev {
 	display: inline-block;
@@ -984,6 +993,13 @@
 	padding: 30px;
 	font-weight: 600;
 	font-size: 20px;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-ms-transition: all 0.3s;
+	transition: all 0.3s;
+}
+.b-last-news-item:hover .name {
+	opacity: 0.5;
 }
 .b-last-news-item .date {
 	max-width: calc(100% - 60px);
@@ -1528,7 +1544,7 @@
 }
 .b-info-cards .card.big {
 	width: 100%;
-	padding-right: calc(36% + 45px);
+	padding-right: calc(100% - 720px);
 }
 .b-info-cards .card.extra-big {
 	width: 100%;
@@ -1561,9 +1577,9 @@
 }
 .b-info-cards .card .abs-img {
 	display: block;
-	max-width: 36%;
+	max-width: 430px;
 	position: absolute;
-	right: 0;
+	left: 740px;
 	top: 50%;
 	-webkit-transform: translateY(-50%);
 	-moz-transform: translateY(-50%);
@@ -2347,11 +2363,17 @@
 		left: calc(50% + 65px);
 	}
 
+	.b-info-cards .card.big {
+		padding-right: calc(100% - 530px);
+	}
 	.b-info-cards .card.extra-big {
 		padding-right: calc(100% - 350px);
 	}
 	.b-info-cards .card.small {
 		width: calc(50% - 15px);
+	}
+	.b-info-cards .card .abs-img {
+		left: 515px;
 	}
 	.b-info-cards .card.extra-big .abs-img {
 		left: 370px;
@@ -2861,7 +2883,7 @@
 		padding: 15px 20px;
 	}
 	.b-info-cards .card.big {
-		padding-right: calc(36% + 20px);
+		padding-right: calc(100% - 420px);
 	}
 	.b-info-cards .card .title {
 		font-size: 16px;
@@ -2872,6 +2894,10 @@
 	}
 	.b-info-cards .card .btn {
 		margin-top: 15px;
+	}
+	.b-info-cards .card .abs-img {
+		max-width: 300px;
+		left: 430px;
 	}
 	.b-info-cards .card.extra-big .abs-img {
 		max-width: 460px;
@@ -3254,12 +3280,11 @@
 		width: 100%;
 	}
 	.b-info-cards .card.big {
-		padding-right: 30%;
+		padding-right: calc(100% - 280px);
 	}
 	.b-info-cards .card .abs-img {
-		max-width: 150px;
-		right: auto;
-		left: calc(70% + 10px);
+		max-width: 240px;
+		left: 290px;
 	}
 	.b-info-cards .card.small {
 		width: 100%;
@@ -3392,8 +3417,14 @@
 		max-width: 240px;
 	}
 
+	.b-info-cards .card.big {
+		padding-right: calc(100% - 200px);
+	}
 	.b-info-cards .card.extra-big {
 		padding-right: calc(100% - 200px);
+	}
+	.b-info-cards .card .abs-img {
+		left: 210px;
 	}
 	.b-info-cards .card.extra-big .abs-img {
 		left: 210px;

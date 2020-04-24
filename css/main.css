@@ -2225,6 +2225,21 @@
 	margin-top: 30px;
 }
 
+.b-best {
+	display: inline-block;
+	padding: 15px 25px;
+	border-radius: 100px;
+	font-size: 14px;
+	background-color: #f0f0f0;
+	margin-bottom: 25px;
+}
+.b-best p {
+	display: block;
+}
+.b-best p span {
+	font-weight: 600;
+}
+
 
 
 
@@ -3195,6 +3210,12 @@
 	.tourvisor .TVHotItem {
 		margin-bottom: 10px !important;
 		margin-right: auto !important;
+	}
+
+	.b-best {
+		padding: 10px 15px;
+		font-size: 12px;
+		margin-bottom: 15px;
 	}
 }
 @media screen and (max-width: 560px){

@@ -203,6 +203,21 @@ $(document).ready(function(){
 		return false;
 	});
 
+	function lastDay(){
+		var now = new Date();
+		var date = new Date(now.getFullYear(),now.getMonth()+1,0);
+		var month = date.getMonth() + 1;
+		var year = String(date.getFullYear());
+		if (month < 10){
+			month = '0'+month;
+		}
+		year = year.slice(-2);
+		if ($('.last-day').length){
+			$('.last-day').text(date.getDate()+'.'+month+'.'+year);
+		}
+	}
+	lastDay();
+
 	function scrollBanner(){
 		if ( $('.scroll-wrap-banner').length ){
 			if ( $(window).width() > 768 ) {

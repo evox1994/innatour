@@ -3298,34 +3298,14 @@
 		width: calc(100% - 240px);
 	}
 
-	.b-steps {
-		display: block;
-		max-width: 300px;
-		margin: 20px auto 0;
-	}
 	.b-steps li {
-		width: 100%;
-		margin-bottom: 15px;
-		display: -webkit-flex;
-		display: -ms-flexbox;
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		text-align: left;
+		width: calc(100%/3 - 5px);
 	}
 	.b-steps li:before {
-		content: none;
-	}
-	.b-steps li:last-child {
-		margin-bottom: 0;
-	}
-	.b-steps li .number {
-		margin: 0;
+		width: calc(100% - 62px);
 	}
 	.b-steps li .text {
-		margin: 0;
-		width: calc(100% - 70px);
-		max-width: none;
+		font-size: 10px;
 	}
 
 	.b-col {
